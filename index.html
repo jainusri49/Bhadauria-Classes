@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC CLASSES</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <h3>ABC CLASSES</h3>
+        <div class="headerLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="form.html">Registration Form</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="download.jpg" alt="Image 1" />
+        <img src="download (2).jpg" alt="Image 2" />
+        <img src="download (1).jpg" alt="Image 3" />
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div>
+      <h2
+        style="
+          text-align: center;
+          font-size: 30px;
+          color: rgba(184, 245, 18, 0.842);
+        "
+      >
+        Our Top Courses
+      </h2>
+    </div>
+    <div class="courses">
+      <div class="courseContent">
+        <h3>SSC</h3>
+        <p class="description">
+          This is the best course of SSC. Our coaching provides the best
+          content.
+        </p>
+        <p><strong>Price: </strong> Rs.2499</p>
+      </div>
+
+      <div class="courseContent">
+        <h3>BANK</h3>
+        <p class="description">
+          This is the best course of SSC. Our coaching provides the best
+          content.
+        </p>
+        <p><strong>Price: </strong> Rs.1499</p>
+      </div>
+
+      <div class="courseContent">
+        <h3>RAILWAY</h3>
+        <p class="description">
+          This is the best course of SSC. Our coaching provides the best
+          content.
+        </p>
+        <p><strong>Price: </strong> Rs.1499</p>
+      </div>
+    </div>
+    <div class="courses">
+      <div class="courseContent">
+        <h3>UP POLICE</h3>
+        <p class="description">
+          This is the best course of SSC. Our coaching provides the best
+          content.
+        </p>
+        <p><strong>Price: </strong> Rs.999</p>
+      </div>
+
+      <div class="courseContent">
+        <h3>CTET</h3>
+        <p class="description">
+          This is the best course of SSC. Our coaching provides the best
+          content.
+        </p>
+        <p><strong>Price: </strong> Rs.499</p>
+      </div>
+
+      <div class="courseContent">
+        <h3>STET</h3>
+        <p class="description">
+          This is the best course of SSC. Our coaching provides the best
+          content.
+        </p>
+        <p><strong>Price: </strong> Rs.1999</p>
+      </div>
+    </div>
+
+    <section class="testimonials">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-container">
+          <div class="testimonial">
+              <p>"ABC Classes transformed my learning experience! The instructors are knowledgeable and supportive. I scored higher than I ever thought possible!"</p>
+              <h4>- John Doe</h4>
+              <p>SSC Student</p>
+          </div>
+          <div class="testimonial">
+              <p>"I never enjoyed studying until I joined ABC Classes. The interactive sessions made complex topics easy to understand."</p>
+              <h4>- Jane Smith</h4>
+              <p>BANK Exam Student</p>
+          </div>
+          <div class="testimonial">
+              <p>"Thanks to ABC Classes, I passed my Railway exam with flying colors! The guidance and resources provided were invaluable."</p>
+              <h4>- Michael Brown</h4>
+              <p>RAILWAY Exam Student</p>
+          </div>
+      </div>
+      <!-- <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button> -->
+  </section>
+  
+  
+  
+
+    <footer>
+      <div class="about">
+        <h3>About</h3>
+        <p>
+          ABC Classes is the best coaching classes in Jalaun Distt. which is
+          located in Orai near Ram Nagar. We provided thousands of selections in
+          last five year.
+        </p>
+      </div>
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <span>Phone: 9564783940</span> <br />
+        <span>Email: aman@gmail.com</span>
+      </div>
+
+      <div class="followUS">
+        <h3>Follow Us</h3>
+        <span>facebook</span> <br />
+        <span>instagram</span>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+
+  <!-- <script>
+    let currentIndex = 0;
+    
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.testimonial');
+        const totalSlides = slides.length;
+        if (index >= totalSlides) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else {
+            currentIndex = index;
+        }
+        const offset = -currentIndex * (320); // Adjust based on the width of the testimonial + margin
+        document.querySelector('.testimonial-container').style.transform = `translateX(${offset}px)`;
+    }
+    
+    function changeSlide(direction) {
+        showSlide(currentIndex + direction);
+    }
+    
+    // Initialize the first slide
+    showSlide(currentIndex);
+    </script> -->
+    
+    
+    
+</html>
