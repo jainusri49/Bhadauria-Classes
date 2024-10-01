@@ -75,32 +75,108 @@ button {
 }
 
 .courses {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 10px; 
+    padding: 10px;
+    border-radius: 10px;
+    border: none; */
+
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .courseContent {
-  background-color: rgb(137, 14, 65);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 20px;
-  width: 40%;
-  color: white;
-  transition: 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 20%;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    /* gap: 20px; */
+    color: #f5f2f2;
+    background-color: rgb(137, 14, 65);
+    ;
 }
 
 .courseContent:hover {
-  box-shadow: 4px 4px 4px 4px rgba(191, 183, 183, 0.9);
+    box-shadow: 4px 4px 4px 4px rgba(191, 183, 183, 0.8);
 }
 
-.courseContent h3,
-p {
+.courseContent h3, p {
   text-align: center;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(8, 8, 10, 0.9); 
+}
+
+.popup-content {
+    background-color: #0b0d0b;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    color: white;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(16, 15, 18, 0.9);
+}
+
+#popupTitle {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 40px;
+  background-color: #5bc73b;
+  color: rgb(11, 47, 225);
+  font-size: 29px;
+}
+
+#popupSubjects {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 890px) {
+  #popupSubjects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#popupSubjects li {
+  list-style-type: none;
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .testimonials {
@@ -174,9 +250,6 @@ p {
 .next {
     right: 10px;
 }
-
-
-
 
 footer {
   display: flex;
