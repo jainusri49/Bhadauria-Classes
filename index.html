@@ -28,73 +28,66 @@
       <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <div>
-      <h2
-        style="
-          text-align: center;
-          font-size: 30px;
-          color: rgba(184, 245, 18, 0.842);
-        "
-      >
-        Our Top Courses
-      </h2>
-    </div>
-    <div class="courses">
-      <div class="courseContent">
+    <h2 style="text-align: center; font-size: 40px;">Our Top Courses</h2>
+<div class="courses">
+    <div class="courseContent" onclick="openPopup('SSC')">
         <h3>SSC</h3>
         <p class="description">
-          This is the best course of SSC. Our coaching provides the best
-          content.
+            This is the best course of SSC. Our coaching provides the best content.
         </p>
         <p><strong>Price: </strong> Rs.2499</p>
-      </div>
+    </div>
 
-      <div class="courseContent">
+    <div class="courseContent" onclick="openPopup('BANK')">
         <h3>BANK</h3>
         <p class="description">
-          This is the best course of SSC. Our coaching provides the best
-          content.
+            This is the best course for BANK exams. Our coaching provides the best content.
         </p>
         <p><strong>Price: </strong> Rs.1499</p>
-      </div>
+    </div>
 
-      <div class="courseContent">
+    <div class="courseContent" onclick="openPopup('RAILWAY')">
         <h3>RAILWAY</h3>
         <p class="description">
-          This is the best course of SSC. Our coaching provides the best
-          content.
+            This is the best course for RAILWAY exams. Our coaching provides the best content.
         </p>
         <p><strong>Price: </strong> Rs.1499</p>
-      </div>
     </div>
-    <div class="courses">
-      <div class="courseContent">
+
+    <div class="courseContent" onclick="openPopup('UP POLICE')">
         <h3>UP POLICE</h3>
         <p class="description">
-          This is the best course of SSC. Our coaching provides the best
-          content.
+            This is the best course for UP POLICE. Our coaching provides the best content.
         </p>
         <p><strong>Price: </strong> Rs.999</p>
-      </div>
+    </div>
 
-      <div class="courseContent">
+    <div class="courseContent" onclick="openPopup('CTET')">
         <h3>CTET</h3>
         <p class="description">
-          This is the best course of SSC. Our coaching provides the best
-          content.
+            This is the best course for CTET. Our coaching provides the best content.
         </p>
         <p><strong>Price: </strong> Rs.499</p>
-      </div>
+    </div>
 
-      <div class="courseContent">
+    <div class="courseContent" onclick="openPopup('STET')">
         <h3>STET</h3>
         <p class="description">
-          This is the best course of SSC. Our coaching provides the best
-          content.
+            This is the best course for STET. Our coaching provides the best content.
         </p>
         <p><strong>Price: </strong> Rs.1999</p>
-      </div>
     </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="coursePopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h3 id="popupTitle">Course Details</h3>
+        <div id="popupSubjects"></div>
+    </div>
+</div>
+
 
     <section class="testimonials">
       <h2>What Our Students Say</h2>
@@ -170,7 +163,33 @@
     // Initialize the first slide
     showSlide(currentIndex);
     </script> -->
-    
-    
-    
+
+    <script>
+      function openPopup(course) {
+          const subjects = {
+              'SSC': ['Maths', 'English', 'Reasoning', 'G.S.', 'Hindi'],
+              'BANK': ['Maths', 'English', 'Banking Awareness', 'G.S.', 'Computer Knowledge'],
+              'RAILWAY': ['Maths', 'English', 'Reasoning', 'G.S.', 'Technical Ability'],
+              'UP POLICE': ['Maths', 'Hindi', 'G.S.', 'Reasoning', 'English'],
+              'CTET': ['Child Development', 'Maths', 'English', 'Environmental Studies', 'Hindi'],
+              'STET': ['English', 'Hindi', 'Maths', 'G.S.', 'Reasoning']
+          };
+      
+          document.getElementById('popupTitle').innerText = course;
+          const subjectsList = document.getElementById('popupSubjects');
+          subjectsList.innerHTML = ''; // Clear previous subjects
+          subjects[course].forEach(subject => {
+              const li = document.createElement('li');
+              li.textContent = subject;
+              subjectsList.appendChild(li);
+          });
+      
+          document.getElementById('coursePopup').style.display = "block";
+      }
+      
+      function closePopup() {
+          document.getElementById('coursePopup').style.display = "none";
+      }
+      </script>
+  
 </html>
